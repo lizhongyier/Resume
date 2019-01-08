@@ -1,0 +1,406 @@
+<meta charset="utf-8" />
+*{
+	margin: 0px;
+	padding: 0px;
+	font: 16px "微软雅黑";
+	color: #333;
+	list-style-type: none;
+}
+.clear::after{
+	clear: both;
+	display: block;
+	content: "";
+	height: 0px;
+	visibility: hidden;
+}
+.clearfloat{
+	overflow: hidden;
+	zoom: 1;
+}
+body{
+	background-color: #EEEEEE;
+}
+/*Backtotop*/
+#toptop{
+	position: fixed;
+	width: 62px;
+	height: 62px;
+	bottom: 120px;
+	right: 15px;
+	border-radius: 8px;
+	background-color: rgba(0,0,0,0.2);
+	text-align: center;
+	text-decoration: none;
+	z-index: 9999;
+}
+#toptop:hover i{
+	color: #FFFFFF;
+}
+#toptop:hover span{
+	color: #FFFFFF;
+	font-size: 14px;
+}
+#toptop i{
+	font-size: 28px;
+	line-height: 1.5em;
+	color: rgba(0,0,0,0.6);
+}
+#toptop span{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	color: rgba(0,0,0,0.6);
+}
+/*toparea*/
+.tophead{
+	width: 100%;
+	padding: 15px 10px;
+	height: 250px;
+	box-sizing: border-box;
+}
+.topleft{
+	float: left;
+	width: 30%;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	height: 100%;
+}
+.topleft ul{
+	margin: 0 auto;
+	padding: 0px;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	-webkit-transform-style:preserve-3d ;
+	list-style-type: none;
+	animation: rotatebox 12s infinite alternate;
+}
+.topleft ul li{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	line-height: 200px;
+}
+.topleft ul li img{
+	width: 100%;
+}
+.topleft ul li:nth-of-type(1){
+	-webkit-transform: translateZ(100px);
+}
+.topleft ul li:nth-of-type(2){
+	-webkit-transform: translateZ(-100px) rotateY(180deg);
+}
+.topleft ul li:nth-of-type(3){
+	-webkit-transform: translateX(-100px) rotateY(-90deg);
+}
+.topleft ul li:nth-of-type(4){
+	-webkit-transform: translateX(100px) rotateY(90deg);
+}
+.topleft ul li:nth-of-type(5){
+	-webkit-transform: translateY(-100px) rotateX(90deg);
+}
+.topleft ul li:nth-of-type(6){
+	-webkit-transform: translateY(100px) rotateX(90deg);
+}
+@-webkit-keyframes rotatebox{
+	from{
+		-webkit-transform: rotateY(0deg) rotateX(10deg);
+	}
+	to{
+		-webkit-transform: rotateY(720deg) rotateX(-10deg);
+	}
+}
+.topright{
+	float: right;
+	width: 70%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: url(../img/topbackground2.png) no-repeat left top;
+	background-size: 100%;
+	color: #FFFFFF;
+}
+.topright ul{
+	float: left;
+	list-style-type: none;
+	font-size: 18px;
+	margin: 0px;
+	padding:20px 0px;
+}
+.topright ul li i{
+	margin: 7px;
+}
+.topright ul:nth-of-type(2){
+	margin-top: 50px;
+}
+/*edcationbackground*/
+.mainbody{
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.active1{
+	-webkit-transition: all 0.3s;
+	-webkit-transform-origin: left center; 
+	-webkit-transform: scale(1.1);
+}
+.active2{
+	-webkit-transition: all 0.3s;
+	-webkit-transform-origin: left center; 
+	-webkit-transform: scale(1);
+}
+.mainbody .edubac{
+	width: 100%;
+	height: 500px;
+	padding: 10px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 25px 1px #999;
+	box-sizing: border-box;
+}
+.mainbody .edubac .title{
+	margin-top: 10px;
+	width: 100%;
+	height: 100px;
+	text-align: left;
+}
+.mainbody .edubac .title img{
+	height: 100px;
+}
+.mainbody .educontent{
+	height: 400px;
+	font-size: 18px;
+	color: #333333;
+	margin-top: 20px;
+}
+.mainbody .educontent .educontentleft{
+	height: 340px;
+}
+.mainbody .educontent .educontentright{
+	height: 340px;
+}
+.mainbody .educontent ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 340px;
+}
+.mainbody .educontent ul li{
+	margin: 20px 0px;
+}
+.mainbody .educontent ul li span{
+	display: inline-block;
+	margin: 0px 5px;
+	color: #092E63;
+}
+.mainbody .educontent .educontentleft .box span{
+	float: left;
+}
+.mainbody .educontent .educontentleft .box .courses{
+	float: left;
+}
+.mainbody .educontent .educontentleft .box table td{
+	margin: 0px 10px;
+}
+.mainbody .educontent .educontentright .honor span{
+	float: left;
+}
+.mainbody .educontent .educontentright .honor div{
+	float: left;
+}
+/*work experience*/
+.mainbody .workexp{
+	width: 100%;
+	height: 450px;
+	padding: 10px;
+	margin-top: 20px;
+	font-size: 18px;
+	color: #333333;
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 25px 1px #999;
+	box-sizing: border-box;
+}
+.mainbody .workexp .title{
+	margin-top: 10px;
+	width: 100%;
+	height: 100px;
+	text-align: left;
+}
+.mainbody .workexp .title img{
+	height: 100px;
+}
+.mainbody .workexp ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 20px;
+	width: 100%;
+	height: 290px;
+}
+.mainbody .workexp ul li{
+	margin: 20px 0px;
+	
+}
+.mainbody .workexp ul li span{
+	display: inline-block;
+	margin: 0px 5px;
+	color: #092E63;
+}
+.mainbody .workexp ul li p{
+	font-size: 16px;
+	line-height: 2.5em;
+	padding-left: 20px;
+}
+/*works display*/
+.mainbody .worksdisplay{
+	width: 100%;
+	height: 660px;
+	padding: 10px;
+	margin-top: 20px;
+	font-size: 18px;
+	color: #333333;
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 25px 1px #999;
+	box-sizing: border-box;
+}
+.mainbody .worksdisplay .title{
+	margin-top: 10px;
+	width: 100%;
+	height: 100px;
+	text-align: left;
+}
+.mainbody .worksdisplay .title #github{
+	width: 200px;
+	height: 60px;
+	font-size: 20px;
+	line-height: 45px;
+	float: right;
+	position: relative;
+	cursor: none;
+	margin: 20px;
+}
+.mainbody .worksdisplay .title #github .icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  font-size: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+  z-index: 9999;
+}
+.mainbody .worksdisplay .title #github:hover .icon{
+	display: block;
+}
+.mainbody .worksdisplay .title img{
+	height: 100px;
+}
+.mainbody .worksdisplay .workscontent{
+	height: 510px;
+	font-size: 18px;
+	color: #333333;
+	margin-top: 20px;
+}
+.mainbody .worksdisplay .workscontent .btns{
+	border-bottom: 1px solid #E3E3E3;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+.mainbody .worksdisplay .workscontent .btns .btn{
+	width: 150px;
+	outline: none;
+}
+.activ4{
+	box-shadow: 0px 0px 5px 1px gainsboro inset!important;
+}
+.worksbox>div{
+	width: 100%;
+	height: 460px;
+	padding: 10px;
+	box-sizing: border-box;
+	display: none;
+} 
+.worksbox>div:first-of-type{
+	display: block;
+}
+/*jsbox*/
+.worksbox .banner1{
+	width: 750px;
+	height: 366px;
+	border: 2px solid #E3E3E3;
+	margin: 0px auto;
+	position: relative;
+}
+.worksbox .banner1 ul{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.worksbox .banner1 ul li{
+	width: 750px;
+	height: 366px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+.worksbox .banner1 ul li:first-child{
+	display: block;
+}
+.worksbox .banner1 ul li img{
+	width: 750px;
+	height: 366px;
+}
+.worksbox .banner1 .prev,.next{
+	width: 70px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 38px;
+	color: #FFFFFF;
+	background-color: rgba(0,0,0,0.2);
+	position: absolute;
+	top: 150px;
+	left: 10px;
+	font-weight: 800;
+	font-family: arial;	
+	cursor: pointer;
+	border-radius: 8px 0px 0px 8px;
+}
+.worksbox .banner1 .next{
+	left: auto;
+	right: 10px;
+	border-radius: 0px 8px 8px 0px;
+}
+.worksbox .banner1 .points{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: 0px;
+}
+.worksbox .banner1 .points span{
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 50%;
+	color: #333;
+	margin-right: 5px;
+	background-color: rgba(255,0,0,0.3);
+	cursor: pointer;
+}
+.worksbox .banner1 .points span.active3{
+	background-color: rgba(0,255,0,0.3);
+	color: #FFFFFF;
+	box-shadow: 0px 0px 5px 1px gainsboro;
+}
+/*Vuebox*/
+
