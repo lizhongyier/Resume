@@ -330,11 +330,29 @@ body{
 }
 /*jsbox*/
 .worksbox .banner1{
-	width: 750px;
-	height: 366px;
+	width: 754px;
+	height: 370px;
 	border: 2px solid #E3E3E3;
 	margin: 0px auto;
 	position: relative;
+}
+.worksbox .jsbox .text-left ul{
+	margin: 10px;
+	padding: 0px;
+	list-style-type: none;
+	color: #006A55;
+}
+.worksbox .jsbox .text-left ul li{
+	margin: 15px 0px;
+}
+.worksbox .jsbox .jsright p{
+	margin: 15px;
+	color: #204D74;
+	font-size: 16px;
+}
+.worksbox .jsbox .text-left ul li img{
+	width: 25px;
+	margin:0px 5px;
 }
 .worksbox .banner1 ul{
 	margin: 0px;
@@ -402,5 +420,6 @@ body{
 	color: #FFFFFF;
 	box-shadow: 0px 0px 5px 1px gainsboro;
 }
+
 /*Vuebox*/
 
