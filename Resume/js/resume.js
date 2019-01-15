@@ -21,17 +21,17 @@
       effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
-      observer:true,
       slidesPerView: 'auto',
+      observer:true,
       coverflowEffect: {
         rotate: 50,
-        stretch: 0,
+        stretch: 10,
         depth: 100,
         modifier: 1,
         slideShadows : true,
       },
       pagination: {
-        el: '.swiper-pagination',
+         el: '.swiper-pagination',
       },
     });
 
