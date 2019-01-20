@@ -445,4 +445,11 @@ body{
       background-size: contain;
       background-repeat: no-repeat;
     }
-
+.vuebox .slidebox .vuetxt1{
+	float: right;
+	margin-right: 30px;
+	width: 200px;
+	color: #333;
+	font-size: 18px;
+	text-indent: 2em;
+}
