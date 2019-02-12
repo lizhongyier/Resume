@@ -494,3 +494,124 @@ body{
 	color: #ff9200;;
 	font-size: 24px;
 }
+.vuebox .slidebox .swiper-content .vuetxt3{
+	width: 400px;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	margin-left: -200px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #333;
+	text-shadow: 0px 0px 8px #FFF;
+	text-indent: 2em;
+	line-height: 1.5em;
+	font-weight: 700;
+}
+.vuebox .slidebox .swiper-content .vuetxt4{
+	width: 300px;
+	position: absolute;
+	top: 80%;
+	right: 10%;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #333;
+	line-height: 1.5em;
+}
+.vuebox .slidebox .swiper-content .vuetxt5{
+	width: 250px;
+	position: absolute;
+	top: 80%;
+	right: 5%;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #333;
+	line-height: 1.5em;
+}
+/*移动端*/
+.worksbox .phoneboxs .phonecontent{
+	width: 100%;
+	height: inherit;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox{
+	width: 360px;
+}
+.worksbox .phoneboxs .phonecontent .phonerightbox{
+	flex: 1;
+	background-color: green;
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl{
+	margin: 10px auto;
+	width: 300px;
+	color: #ffffff;
+	box-shadow: 0px 0px 10px #333;
+	border-radius: 20px;
+	}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl dt{
+	height: 70px;
+	line-height: 70px;
+	background-color: #373D4B;
+	border-radius: 20px 20px 0px 0px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl dd{
+	height: 60px;
+	padding-left: 20px ;
+	display: flex;
+	align-items: flex-start;
+	align-items: center;
+	-webkit-transition: all 0.3s;
+	-webkit-transform: scale(1);
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl dd span{
+	display: block;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 50%;
+	background-color: #fff;
+	color: #C24448;
+	margin-right: 10px;
+	text-align: center;
+	font-size: 16px;
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl .listd1{
+	background-color:  #FA6755;
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl .listd2{
+	background-color: #E0574F;
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl .listd3{
+	background-color: #cd524d;
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl .listd4{
+	background-color: #CD4B4B;
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl .listd5{
+	background-color: #C24448;
+	border-radius: 0px 0px 20px 20px ;
+}
+.worksbox .phoneboxs .phonecontent .phoneleftbox dl dd:hover{
+	-webkit-transform: scale(1.08);
+	box-shadow: 0px 0px 2px #333;
+}
+.worksbox .phoneboxs .phonerightbox .phohe-row{
+	width:100%;
+	height: 50%;
+	background-color: orange;
+	display: flex;
+}
+.worksbox .phoneboxs .phonerightbox .phohe-row >div{
+	flex: 1;
+	height: inherit;
+}
+.worksbox .phoneboxs .phonerightbox .phohe-row .canvas-box{
+	
+}
+.worksbox .phoneboxs .phonerightbox .phohe-row .css-box{
+	
+}
