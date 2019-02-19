@@ -98,5 +98,12 @@ $(document).ready(function() {
     	$(this).addClass("active3").siblings("span").removeClass("active3");
 		images.eq(i).fadeIn().siblings("li").fadeOut();
     })
+    $(".webmp").click(function(){
+    	$("#ups-banner").css("display","block");
+    })
+    $(".btna").click(function(){
+    	$("#ups-banner").css("display","none");
+    	
+    })
 })
 	

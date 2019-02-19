@@ -1089,5 +1089,30 @@ body {
 				100%{
 					background-image: url(../img/pumpkiner/jump9.png);
 				}
-				
 			}
+.weui-pro,.miniprogram{
+	display: flex;
+	width: 100%;
+	align-items: flex-end;
+	justify-content: space-around;
+}
+.weui-pro .logo,.miniprogram .logo{
+	width: 150px;
+	height: inherit;
+}
+.weui-pro .logo img,.miniprogram .logo img{
+	width: 100%;
+}
+.weui-pro .text,.miniprogram .text{
+	flex: 1;
+	height: inherit;
+	text-indent: 2em;
+	line-height: 2.5rem;
+	padding-top: 50px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+#ups-banner{
+	display: none;
+}

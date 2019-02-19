@@ -1,10 +1,14 @@
 var upsSwiper = new Swiper('.swiper-containera', {
+	observer:true,
+    observeParents:true,
 	speed: 1000,
 	longSwipes: false,
 	loop: true,
 	autoplay: {
 		disableOnInteraction: false,
 	},
+	
+	
 	navigation: {
 		nextEl: '.swiper-button-nexta',
 		prevEl: '.swiper-button-preva',
