@@ -239,88 +239,90 @@
 														</div>
 
 														<canvas id="canavs" width="800" height="800"></canvas>
-														<script type="text/javascript">var canvas = document.querySelector("#canavs");
-var context = canvas.getContext("2d");
-context.translate(400, 400);
+														<script type="text/javascript">
+															var canvas = document.querySelector("#canavs");
+															var context = canvas.getContext("2d");
+															context.translate(400, 400);
 
-function drawClock() {
-	var now = new Date();
-	var h = now.getHours();
-	var m = now.getMinutes();
-	var s = now.getSeconds();
-	var Y = now.getFullYear();
-	var M = now.getMonth();
-	var D = now.getDate();
-	var w = now.getDay();
-	var week = ["日", "一", "二", "三", "四", "五", "六"]
+															function drawClock() {
+																var now = new Date();
+																var h = now.getHours();
+																var m = now.getMinutes();
+																var s = now.getSeconds();
+																var Y = now.getFullYear();
+																var M = now.getMonth();
+																var D = now.getDate();
+																var w = now.getDay();
+																var week = ["日", "一", "二", "三", "四", "五", "六"]
 
-	context.clearRect(-400, -400, 800, 800)
-	context.beginPath();
-	context.arc(0, 0, 370, 0, Math.PI * 2);
-	context.fillStyle = "#e3e3e3"
-	context.fill();
-	context.lineWidth = 20;
-	context.stroke()
+																context.clearRect(-400, -400, 800, 800)
+																context.beginPath();
+																context.arc(0, 0, 370, 0, Math.PI * 2);
+																context.fillStyle = "#e3e3e3"
+																context.fill();
+																context.lineWidth = 20;
+																context.stroke()
 
-	for(var i = 0; i < 60; i++) {
-		var x = 320 * Math.cos(Math.PI / 180 * 6 * i)
-		var y = 320 * Math.sin(Math.PI / 180 * 6 * i)
-		context.beginPath();
-		if(i % 5 == 0) {
-			context.fillStyle = "cadetblue";
-			context.textAlign = "center";
-			context.textBaseline = "middle";
-			context.font = "bolder 50px arial";
-			context.fillStyle = "#333"
-			context.fillText((i / 5 + 2) % 12 + 1, x, y);
+																for(var i = 0; i < 60; i++) {
+																	var x = 320 * Math.cos(Math.PI / 180 * 6 * i)
+																	var y = 320 * Math.sin(Math.PI / 180 * 6 * i)
+																	context.beginPath();
+																	if(i % 5 == 0) {
+																		context.fillStyle = "cadetblue";
+																		context.textAlign = "center";
+																		context.textBaseline = "middle";
+																		context.font = "bolder 50px arial";
+																		context.fillStyle = "#333"
+																		context.fillText((i / 5 + 2) % 12 + 1, x, y);
 
-		} else {
-			context.fillStyle = "cadetblue"
-			context.arc(x, y, 4, 0, Math.PI * 2)
-		}
-		context.fill()
-	}
-	context.font = "bolder 34px arial";
-	context.fillText(Y + "年" + (M + 1) + "月" + D + "日", 0, 200);
-	context.fillText("星期" + week[w], 0, 240);
-	context.lineCap = "round";
-	context.save(); //分针
-	context.beginPath();
-	context.rotate(Math.PI / 180 * (6 * m + 6 / 60 * s))
-	context.lineTo(0, 60);
-	context.lineTo(0, -270);
-	context.lineWidth = 10;
-	context.stroke()
-	context.restore()
+																	} else {
+																		context.fillStyle = "cadetblue"
+																		context.arc(x, y, 4, 0, Math.PI * 2)
+																	}
+																	context.fill()
+																}
+																context.font = "bolder 34px arial";
+																context.fillText(Y + "年" + (M + 1) + "月" + D + "日", 0, 200);
+																context.fillText("星期" + week[w], 0, 240);
+																context.lineCap = "round";
+																context.save(); //分针
+																context.beginPath();
+																context.rotate(Math.PI / 180 * (6 * m + 6 / 60 * s))
+																context.lineTo(0, 60);
+																context.lineTo(0, -270);
+																context.lineWidth = 10;
+																context.stroke()
+																context.restore()
 
-	context.save(); //时针
-	context.beginPath();
-	context.rotate(Math.PI / 180 * (30 * h + m * 30 / 60))
-	context.lineTo(0, 40);
-	context.lineTo(0, -220);
-	context.lineWidth = 20;
-	context.stroke()
-	context.restore()
-	//注意谁写在最后谁在上面
-	context.save(); //秒针
-	context.beginPath();
-	context.rotate(Math.PI / 30 * s)
-	context.lineTo(0, 80);
-	context.lineTo(0, -300);
-	context.strokeStyle = "orangered"
-	context.lineWidth = 3;
-	context.stroke()
-	context.restore()
-	context.beginPath()
-	context.arc(0, 0, 25, 0, Math.PI * 2);
-	context.fillStyle = 'orangered'
-	context.fill();
-	context.closePath()
+																context.save(); //时针
+																context.beginPath();
+																context.rotate(Math.PI / 180 * (30 * h + m * 30 / 60))
+																context.lineTo(0, 40);
+																context.lineTo(0, -220);
+																context.lineWidth = 20;
+																context.stroke()
+																context.restore()
+																//注意谁写在最后谁在上面
+																context.save(); //秒针
+																context.beginPath();
+																context.rotate(Math.PI / 30 * s)
+																context.lineTo(0, 80);
+																context.lineTo(0, -300);
+																context.strokeStyle = "orangered"
+																context.lineWidth = 3;
+																context.stroke()
+																context.restore()
+																context.beginPath()
+																context.arc(0, 0, 25, 0, Math.PI * 2);
+																context.fillStyle = 'orangered'
+																context.fill();
+																context.closePath()
 
-}
-drawClock()
+															}
+															drawClock()
 
-setInterval(drawClock, 1000)</script>
+															setInterval(drawClock, 1000)
+														</script>
 
 													</div>
 												</div>
@@ -341,17 +343,17 @@ setInterval(drawClock, 1000)</script>
 															<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 														</div>
 														<div class="box">
-															<div class="sun"><img src="img/pumpkiner/sun.png"/></div>
+															<div class="sun"><img src="img/pumpkiner/sun.png" /></div>
 															<div class="sky">
-																<div class="cloud-1"><img src="img/pumpkiner/cloud1.png"/></div>
-																<div class="cloud-2"><img src="img/pumpkiner/cloud2.png"/></div>
+																<div class="cloud-1"><img src="img/pumpkiner/cloud1.png" /></div>
+																<div class="cloud-2"><img src="img/pumpkiner/cloud2.png" /></div>
 															</div>
 															<div class="trees"></div>
-															<div class="mm1"><img src="img/pumpkiner/mm1.png"/></div>
-															<div class="mm2"><img src="img/pumpkiner/mm2.png"/></div>
-															<div class="mm3"><img src="img/pumpkiner/mm3.png"/></div>
+															<div class="mm1"><img src="img/pumpkiner/mm1.png" /></div>
+															<div class="mm2"><img src="img/pumpkiner/mm2.png" /></div>
+															<div class="mm3"><img src="img/pumpkiner/mm3.png" /></div>
 															<div class="pumpkiner"></div>
-															
+
 														</div>
 													</div>
 												</div>
@@ -361,7 +363,7 @@ setInterval(drawClock, 1000)</script>
 									<div class="phohe-row" style="height: 35%;">
 										<div class="weui-pro">
 											<div class="logo">
-												<img src="img/public.png"/>
+												<img src="img/public.png" />
 											</div>
 											<div class="text">
 												能够使用weui、js-sdk组件框架，使页面内容、功能丰富
@@ -372,9 +374,9 @@ setInterval(drawClock, 1000)</script>
 												可以进行简单的微信小程序开发
 											</div>
 											<div class="logo">
-												<img src="img/miniprogram.png"/>
+												<img src="img/miniprogram.png" />
 											</div>
-											
+
 										</div>
 									</div>
 								</div>
@@ -384,8 +386,7 @@ setInterval(drawClock, 1000)</script>
 				</div>
 			</div>
 		</div>
-		
-		
+
 		<a href="#TTop" id="toptop"><i class="fa fa-arrow-up"></i><span>回到顶部</span></a>
 
 		<div id="ups-banner">
@@ -439,16 +440,70 @@ setInterval(drawClock, 1000)</script>
 				<div class="swiper-button-preva"></div>
 			</div>
 		</div>
-		
+		<!--others部分-->
 		<div class="others">
 			<div class="title">
 				<div class="text">还有这些</div>
-				<div class="images">
-					<img src="img/here1.png"/>
-					<img src="img/here2.png"/>
-					<img src="img/here3.png"/>
+				<div class="images clear">
+					<img class="here1" style="width: 40px; left:0px; top: auto;" src="img/here1.png" />
+					<img class="here2" style="width: 55px; left:40px; top: auto;" src="img/here2.png" />
+					<img class="here3" style="width: 70px; left:95px; top: auto;" src="img/here3.png" />
 				</div>
 			</div>
+			<div class="other-list1">
+				<div class="biglucky">
+					<img class="plate" src="img/plate.png" />
+					<img class="rungo" src="img/go.png" />
+					<img class="aarrow" src="img/arrow.png" />
+				</div>
+				<div class="content clear">
+					<div class="luckbox">
+					</div>
+					<div class="text">模拟转盘</div>
+				</div>
+			</div>
+			<div class="other-list2">
+				<div class="text">
+					<div>标</div>
+					<div>签</div>
+					<div>云</div>
+				</div>
+				<div class="ball">
+					<a href="#">中国上海</a>
+					<a href="#">非凡教育</a>
+					<a href="#">徐汇校区</a>
+					<a href="#">javascript</a>
+					<a href="#">ES6</a>
+					<a href="#">面向对象</a>
+					<a href="#">标签云</a>
+					<a href="#">中国上海</a>
+					<a href="#">非凡教育</a>
+					<a href="#">徐汇校区</a>
+					<a href="#">javascript</a>
+					<a href="#">ES6</a>
+					<a href="#">面向对象</a>
+					<a href="#">标签云</a>
+					<a href="#">中国上海</a>
+					<a href="#">非凡教育</a>
+					<a href="#">徐汇校区</a>
+					<a href="#">javascript</a>
+					<a href="#">ES6</a>
+					<a href="#">面向对象</a>
+					<a href="#">标签云</a>
+					<a href="#">中国上海</a>
+					<a href="#">非凡教育</a>
+					<a href="#">徐汇校区</a>
+					<a href="#">javascript</a>
+					<a href="#">ES6</a>
+					<a href="#">面向对象</a>
+					<a href="#">标签云</a>
+				</div>
+				
+				<div class="pannels"></div>
+
+			</div>
+			
+			
 		</div>
 
 		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
@@ -458,6 +513,10 @@ setInterval(drawClock, 1000)</script>
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/swiperlg.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/middlelg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.rotate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		</script>
 	</body>
 
 </html>
