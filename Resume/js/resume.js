@@ -232,6 +232,7 @@ $(document).ready(function() {
 
 	$(".rungo").click(function() {
 		$(".luckbox").css("top", -99 + "px");
+		$(".guess").css("background-image","url(img/guess.png)");
 		$(".luckbox").show();
 		$(".luckbox").text("");
 		var r = Math.random() * 360
@@ -250,31 +251,37 @@ $(document).ready(function() {
 					$(".luckbox").animate({
 						top: "210px"
 					}, 1500, "easeOutBounce", function() {
-						$(".luckbox").text("智！");
+						$(".guess").css("background-image","url(img/soga.png)");
+						$(".luckbox").text("智");
+						
 					})
 				} else if(r > 45 && r <= 135) {
 					$(".luckbox").animate({
 						top: "210px"
 					}, 1500, "easeOutBounce", function() {
-						$(".luckbox").text("健！");
+						$(".guess").css("background-image","url(img/soga.png)");
+						$(".luckbox").text("健");
 					})
 				} else if(r > 135 && r <= 225) {
 					$(".luckbox").animate({
 						top: "210px"
 					}, 1500, "easeOutBounce", function() {
-						$(".luckbox").text("达！");
+						$(".guess").css("background-image","url(img/soga.png)");
+						$(".luckbox").text("达");
 					})
 				} else if(r > 225 && r <= 315) {
 					$(".luckbox").animate({
 						top: "210px"
 					}, 1500, "easeOutBounce", function() {
-						$(".luckbox").text("俊!");
+						$(".guess").css("background-image","url(img/soga.png)");
+						$(".luckbox").text("俊");
 					})
 				} else if(r > 315 && r <= 360) {
 					$(".luckbox").animate({
 						top: "210px"
 					}, 1500, "easeOutBounce", function() {
-						$(".luckbox").text("智！");
+						$(".guess").css("background-image","url(img/soga.png)");
+						$(".luckbox").text("智");
 					})
 				}
 			},
@@ -282,5 +289,39 @@ $(document).ready(function() {
 			center: ['50%', '50%']
 		});
 	})
+
+	//panel
+	$(".panel1 .list1 dd").show();
+	$(".panel1 .list2 dd").hide();
+	$(".panel1 .list3 dd").hide();
+
+
+	$(".panel1 dl dt").click(function() {
+		if($(this).siblings("dd").is(":visible")) {
+			$(this).siblings("dd").slideUp("slow");
+			$(this).find(".imagee").attr("src", "img/panel/jia.png");
+			$(this).css("border-radius", "10px");
+			//	                $(this).parent("dl").siblings("dl").children("dd").slideUp("slow");
+			$(this).parent("dl").siblings("dl").children("dt").css("border-radius", "10px ");
+			$(this).parent("dl").siblings("dl").children("dt").find(".imagee").attr("src", "img/panel/jia.png");
+		} else {
+			$(this).siblings("dd").slideDown("slow");
+			$(this).find(".imagee").attr("src", "img/panel/jian.png");
+			$(this).css("border-radius", "10px 10px 0px 0px");
+			$(this).parent("dl").siblings("dl").children("dd").slideUp("slow");
+			$(this).parent("dl").siblings("dl").children("dt").css("border-radius", "10px");
+			$(this).parent("dl").siblings("dl").children("dt").find(".imagee").attr("src", "img/panel/jia.png");
+
+		}
+	})
+	//panel2
+	$(".btnss b").eq(0).addClass("change");
+				$(".box2 ul").eq(0).show().siblings("ul").hide();
+				$(".btnss b").click(function(){
+					num=$(this).index();
+					$(this).addClass("change").siblings("b").removeClass("change");
+					$(".box2 ul").eq(num).show().siblings("ul").hide();
+				})
+
 
 })

@@ -1130,7 +1130,6 @@ body {
 .others {
 	margin-top: 15px;
 	width: 100%;
-	
 	background-color: #fff;
 }
 
@@ -1155,7 +1154,6 @@ body {
 	display: flex;
 	align-items: center;
 	position: relative;
-	
 }
 
 .others .title .images img {
@@ -1228,7 +1226,7 @@ body {
 .others .other-list1 .content .text {
 	width: 120px;
 	height: 50px;
-	background-color: #e9e9e9;
+	background-color: #e5fee3;
 	color: #e06334;
 	text-align: center;
 	line-height: 50px;
@@ -1236,6 +1234,15 @@ body {
 	top: 10px;
 	left: 10px;
 	border-radius: 5px;
+}
+.others .other-list1 .content .guess{
+	width: 200px;
+	height: 200px;
+	background-image: url(../img/guess.png);
+	position: absolute;
+	top: 10px;
+	right: 40px;
+	background-size: contain;
 }
 
 .others .other-list2 {
@@ -1247,23 +1254,25 @@ body {
 	box-sizing: border-box;
 	z-index: 2;
 }
-.others .other-list2 .text{
+
+.others .other-list2 .text {
 	width: 200px;
 	position: absolute;
 	right: 20%;
-	background-color: #d0f5d0;
 	height: 600px;
 	border-radius: 20px 20px 0px 0px;
 	border: 2px solid skyblue;
+	background-color: #FFFFFF;
 }
-.others .other-list2 .text>div{
+
+.others .other-list2 .text>div {
 	width: inherit;
 	font-size: 60px;
 	text-align: center;
 	color: #666;
 	margin-top: 20px;
-	
 }
+
 .others .other-list2 .ball {
 	width: 600px;
 	height: 600px;
@@ -1282,17 +1291,136 @@ body {
 	font-size: 24px;
 	white-space: nowrap;
 	text-decoration: none;
-	padding:3px 5px;
-	background-color: rgba(0,0,0,.1);
+	padding: 3px 5px;
+	background-color: rgba(0, 0, 0, .1);
 	border-radius: 3px;
 	text-shadow: 0px 0px 5px #FFFF00;
 }
-.others .other-list2 .pannels{
+
+.others .other-list2 .pannels {
 	width: 100%;
 	height: 500px;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
-	background-color: green;
 	z-index: 999;
+	box-shadow: 0px -2px 10px 3px rgba(0, 0, 0, .2);
+	background-color: #fff;
+	border-top: 5px solid #8fc78f;
+	border-radius: 25px 25px 0px 0px;
+	padding: 20px;
+	background-color: #d3f6d3db;
+	display: flex;
+	justify-content: space-around;
+	box-sizing: border-box;
+}
+
+.others .other-list2 .pannels .panel1 {
+	flex: 1;
+	height: inherit;
+	padding: 50px;
+}
+
+.others .other-list2 .pannels dl {
+	width: 150px;
+	margin: 5px 0px;
+	padding: 0px;
+	
+}
+
+.others .other-list2 .pannels .panel1 dl dt {
+	border-radius: 10px;
+	background-color: #79C979;
+	text-align: center;
+	line-height: 40px;
+	color: #ffffff;
+	cursor: pointer;
+	border: 2px solid #63c264;
+}
+
+
+.others .other-list2 .pannels dl dd {
+	background: url(../img/4.png) no-repeat 15px center;
+	padding-left: 30px;
+	line-height: 35px;
+	background-color: #FFFFFF;
+}
+
+.others .other-list2 .pannels dl dd:last-of-type {
+	border-radius: 0px 0px 10px 10px;
+}
+
+.pannels .panel2{
+	width: 420px;
+	height: 420px;
+	background-color: darkcyan;
+	border-radius: 15px 0 15px 15px;
+	position: relative;
+	margin-right: 190px;
+}
+
+.pannels .panel2 ul {
+	padding: 20px;
+	width: 420px;
+	height: 420px;
+	position: absolute;
+	box-sizing: border-box;
+	list-style-type: none;
+	font-size: 18px;
+}
+
+.pannels .panel2 ul li {
+	color: #fff;
+	width: 350px;
+	height: 60px;
+	background: url(../img/4.png) no-repeat center left;
+	line-height: 60px;
+	padding-left: 20px;
+	border-bottom: 2px dashed #FFFFFF;
+}
+
+.pannels .panel2 b {
+	position: absolute;
+	width: 120px;
+	height: 45px;
+	border-radius: 0 15px 15px 0;
+	font: 18px "微软雅黑";
+	line-height: 45px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid darkcyan;
+	color: #666666;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+
+.pannels .panel2 .bt1 {
+	right: -120px;
+	top: 0;
+}
+
+.pannels .panel2 .bt2 {
+	right: -120px;
+	top: 78px;
+}
+
+.pannels .panel2 .bt3 {
+	right: -120px;
+	top: 155px;
+}
+
+.pannels .panel2 b.change {
+	background-color: darkcyan;
+	color: #FFFFFF;
+}
+.pannels .txt{
+	padding-top: 50px;
+}
+.pannels .txt p{
+	font-size: 24px;
+	background-color: #ffffff;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border:4px solid #d5c5ff;
+	
 }
