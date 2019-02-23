@@ -815,7 +815,7 @@ body {
 	width: 240px;
 	text-align: center;
 	top: -260px;
-	-webkit-transition: all 0.7s;
+	-webkit-transition: all 0.8s;
 	box-sizing: border-box;
 	text-indent: 2em;
 	border-radius: 0px 0px 5px 5px;
@@ -823,7 +823,8 @@ body {
 }
 
 .worksbox .phoneboxs .phonerightbox .phohe-row .css-box ul:hover .text {
-	top: -30px;
+	/*top: -30px;*/
+	-webkit-transform: translateY(230px);
 }
 
 .worksbox .phoneboxs .phonerightbox .phohe-row .css-box ul .img {
@@ -1111,13 +1112,13 @@ body {
 
 .weui-pro .text,
 .miniprogram .text {
-	flex: 1;
-	height: inherit;
+	width: 100%;
 	text-indent: 2em;
 	line-height: 2.5rem;
-	padding-top: 50px;
-	padding-left: 20px;
 	box-sizing: border-box;
+	font-size: 20px;
+	background-color: #ebf7fa;
+	padding: 25px;
 }
 
 #ups-banner {
