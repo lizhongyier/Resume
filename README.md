@@ -1,4 +1,4 @@
 # Resume
 resume for job hunting
-https://lizhongyier.github.io/Resume/Resume/index.html
+https://lizhongyier.github.io/Resume/index.html
        
