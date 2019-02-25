@@ -1,4 +1,4 @@
 # Resume
-resume for job hunting
+查看简历点这儿：
 https://lizhongyier.github.io/Resume/Resume/index
        
