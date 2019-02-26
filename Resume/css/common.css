@@ -45,6 +45,7 @@ body {
 	text-align: center;
 	text-decoration: none;
 	z-index: 9999;
+	display: none;
 }
 
 #toptop:hover i {
@@ -619,23 +620,23 @@ body {
 }
 
 .vuebox .slidebox .swiper-content .vuetxt4 {
-	width: 300px;
+	width: 350px;
 	position: absolute;
-	top: 80%;
-	right: 10%;
+	top: 70%;
+	right: 7%;
 	font-family: "微软雅黑";
-	font-size: 20px;
+	font-size: 18px;
 	color: #333;
 	line-height: 1.5em;
 }
 
 .vuebox .slidebox .swiper-content .vuetxt5 {
-	width: 250px;
+	width: 350px;
 	position: absolute;
-	top: 80%;
-	right: 5%;
+	top: 67%;
+	right: 2%;
 	font-family: "微软雅黑";
-	font-size: 20px;
+	font-size: 18px;
 	color: #333;
 	line-height: 1.5em;
 }
@@ -1424,4 +1425,124 @@ body {
 	border-radius: 5px;
 	border:4px solid #d5c5ff;
 	
+}
+/*self-introduce*/
+.introduce{
+	width: 100%;
+	background-image: url(../img/selfbg.jpg);
+	background-size: contain;
+	height: 900px;
+	margin-top: 20px;
+	background-repeat: no-repeat;
+	padding-top: 20px;
+	position: relative;
+}
+.introduce-title{
+	width: 100%;
+	height: 100px;
+	
+	position: relative;
+	
+}
+.introduce-title .bg{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(to right,#fff 0%,#e1e1e1 100%);
+	opacity: 0.6;
+	z-index: 0;
+}
+.introduce-title img{
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	z-index: 1;
+}
+.introduce-content{
+	width: 100%;
+	position: relative;
+}
+.introduce-content .img1,.introduce-content .img2{
+	position: absolute;
+	top:70px;
+	width: 120px;
+	height: 120px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.introduce-content .img1{
+	background-image: url(../img/pin1.png);
+	left: 100px;
+}
+
+.introduce-content .img2{
+	background-image: url(../img/pin2.png);
+	right: 100px;
+}
+.introduce-content .text-box{
+	position: absolute;
+	top: 100px;
+	left: 130px;
+	height: 550px;
+	right: 130px;
+	background-color: rgba(255,255,255,0.6);
+	box-sizing: border-box;
+	border-radius: 0px 0px 15px 15px;
+	padding: 100px 80px 0px 80px;
+	box-sizing: border-box;
+	font-size: 24px;
+	line-height: 2em;
+	text-indent: 2em;
+	overflow: hidden;
+}
+.introduce-content .slidedown{
+	position: absolute;
+	top: 100px;
+	left: 130px;
+	right: 130px;
+	height: 50px;
+	text-align: center;
+	z-index: 9;
+}
+.introduce-content .slidedown img{
+	height: inherit;
+	opacity: 0.5;
+	cursor: pointer;
+	display: none;
+}
+.introduce-content .text-box .slideuper{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	margin-top: 20px;
+	
+}
+.introduce-content .text-box .slideuper img{
+	height: inherit;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.contact-msg{
+	width: 100%;
+	position: absolute;
+	bottom: 30px;
+	left: 0px;
+	height: 30px;
+	font-size: 20px;
+	color: #999;
+	line-height: 30px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.4);
+	display: flex;
+	justify-content: center;
+}
+.contact-msg>div{
+	float: left;
+	padding: 0px 20px;
+	text-align: center;
+}
+.contact-msg>div>i{
+	padding: 0px 5px;
 }
