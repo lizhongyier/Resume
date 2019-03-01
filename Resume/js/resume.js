@@ -343,7 +343,7 @@ $(document).ready(function() {
 	$(".slideupp").click(function() {
 		$(this).hide();
 		$(".text-box").animate({
-				height: "580px"
+				height: "610px"
 			}, 500)
 			.animate({
 				height: "60px"
@@ -354,11 +354,11 @@ $(document).ready(function() {
 	$(".slidedownn").click(function() {
 		$(this).hide();
 		$(".text-box").animate({
-				height: "580px"
+				height: "610px"
 			}, 700)
 			.animate({
-				height: "550px"
-			}, 200, function() {
+				height: "590px"
+			}, 400, function() {
 				$(".slideupp").show();
 			})
 	})
